@@ -2,7 +2,7 @@
 A list of projects I build in my leisure/free time, for study purposes inorder to improve my skills 
 
 ### Projects Built So Far 
-- Port Scanner: Scans for open ports in a given address
+- **Port Scanner**: Scans for open ports in a given address
 ```go
   // List of commonPorts
   var commonPorts = map[int]string{
@@ -23,8 +23,11 @@ A list of projects I build in my leisure/free time, for study purposes inorder t
   	5900: "VNC",
   }
 ```
- #### How to run the port scanner
+ ### How to run the port scanner
  ```bash 
   cd port-scanner
   go run main.go
 ```
+
+## Authors
+- Ismael Swaleh

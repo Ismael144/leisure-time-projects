@@ -1,0 +1,14 @@
+// We have to have a ticker
+// Extract file paths
+// Do iteration through
+// Inside the visit function, create a
+// goroutine for each path, so inside the
+// goroutine, get file contents hash them then
+// update our concurrent hashmap
+// And inside a concurrent hashmap, add a ticker
+// for an interval of 1 second
+// Have a channel for where the changed file's path will
+// be seant
+// Then spawn a different goroutine just notifying the changes
+
+This is a goroutine

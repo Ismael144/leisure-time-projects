@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Black and white gradient background with a subtle texture */
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Dark charcoal to deep blue-gray */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide overflow for confetti */
+            position: relative; /* Needed for pseudo-elements */
+        }
+
+        /* Subtle background pattern for added visual interest */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 90%);
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        /* Confetti animation with varied sizes and faster fall - adjusted for black/white/accent */
+        .confetti {
+            position: absolute;
+            width: 8px; /* Smaller default size */
+            height: 8px;
+            background-color: currentColor;
+            opacity: 0;
+            animation: fall 6s linear infinite; /* Slower fall for more grace */
+            border-radius: 50%; /* Make some confetti round */
+        }
+
+        /* Specific confetti styles for variety - shades of grey, silver, and a pop of gold/blue */
+        .confetti:nth-child(1) { top: 10%; left: 20%; color: #C0C0C0; animation-delay: 0s; width: 12px; height: 12px; } /* Silver */
+        .confetti:nth-child(2) { top: 5%; left: 40%; color: #FFD700; animation-delay: 1s; transform: rotate(45deg); } /* Gold accent */
+        .confetti:nth-child(3) { top: 15%; left: 60%; color: #A9A9A9; animation-delay: 2s; width: 10px; height: 10px; border-radius: 0; } /* Dark Gray */
+        .confetti:nth-child(4) { top: 20%; left: 80%; color: #87CEEB; animation-delay: 3s; } /* Sky Blue accent */
+        .confetti:nth-child(5) { top: 0%; left: 10%; color: #D3D3D3; animation-delay: 0.5s; width: 14px; height: 14px; } /* Light Gray */
+        .confetti:nth-child(6) { top: 25%; left: 30%; color: #FFD700; animation-delay: 1.5s; transform: rotate(90deg); } /* Gold accent */
+        .confetti:nth-child(7) { top: 30%; left: 50%; color: #696969; animation-delay: 2.5s; width: 9px; height: 9px; border-radius: 50%; } /* Dim Gray */
+        .confetti:nth-child(8) { top: 10%; left: 70%; color: #87CEEB; animation-delay: 3.5s; } /* Sky Blue accent */
+        .confetti:nth-child(9) { top: 35%; left: 90%; color: #C0C0C0; animation-delay: 4s; width: 11px; height: 11px; } /* Silver */
+        .confetti:nth-child(10) { top: 40%; left: 5%; color: #FFD700; animation-delay: 4.5s; transform: rotate(135deg); } /* Gold accent */
+        .confetti:nth-child(11) { top: 20%; left: 15%; color: #D3D3D3; animation-delay: 0.7s; } /* Light Gray */
+        .confetti:nth-child(12) { top: 5%; left: 75%; color: #87CEEB; animation-delay: 2.2s; width: 13px; height: 13px; border-radius: 0; } /* Sky Blue accent */
+        .confetti:nth-child(13) { top: 30%; left: 25%; color: #A9A9A9; animation-delay: 3.8s; } /* Dark Gray */
+        .confetti:nth-child(14) { top: 15%; left: 55%; color: #FFD700; animation-delay: 1.2s; width: 10px; height: 10px; } /* Gold accent */
+        .confetti:nth-child(15) { top: 45%; left: 85%; color: #C0C0C0; animation-delay: 4.9s; border-radius: 50%; } /* Silver */
+ 
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Keyframe animation for text bounce */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-bounce-text {
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        /* Custom shadow for a more playful look */
+        .custom-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animation for the card itself */
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            80% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .animate-pop-in {
+            animation: popIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Confetti elements -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-lg p-8 md:p-12 rounded-3xl shadow-2xl text-center max-w-sm md:max-w-md lg:max-w-lg mx-4 custom-shadow animate-pop-in">
+        <!-- Main Heading -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-white drop-shadow-lg animate-bounce-text">
+            Happy Birthday, <span class="text-yellow-400"> Sharif</span>! 🥳
+        </h1>
+
+        <!-- Personalized Message -->
+        <p class="text-xl md:text-2xl lg:text-3xl mb-6 font-semibold text-gray-200">
+            Today is all about you! We hope you have an incredible day filled with joy, laughter, and all your favorite things.
+        </p>
+
+        <!-- More Detail Section -->
+        <div class="mb-8 text-gray-300">
+            <p class="text-lg md:text-xl mb-4">
+                May this new year of your life bring countless exciting adventures, new discoveries, and wonderful memories. Keep shining bright and reaching for the stars! ✨
+            </p>
+            <p class="text-base md:text-lg">
+                We're so proud of the amazing person you are becoming. Enjoy every moment of your special day!
+            </p>
+        </div>
+
+        <!-- Call to action or additional message -->
+        <div class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+            Have an amazing day! 🎉🎂🎁
+        </div>
+
+        <!-- Optional: Add a small footer or signature -->
+        <p class="mt-8 text-sm text-gray-400">
+            With immense love and best wishes from everyone!
+        </p>
+    </div>
+
+</body>
+</html>
